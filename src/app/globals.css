@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Might not need this per Next's default */
+/* @media (prefers-color-scheme: light) { */
+:root {
+  --backgroundColor: #fff;
+  --textColor: #000;
+  --borderColor: #aaa;
+}
+/* } */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --backgroundColor: #000;
+    --textColor: #fff;
+    --borderColor: #666;
+  }
+}
+
+html {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+body {
+  color: rgb(var(--textColor));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--backgroundColor))
+    )
+    rgb(var(--backgroundColor));
+}
